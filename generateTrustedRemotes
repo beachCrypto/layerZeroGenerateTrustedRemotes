@@ -1,0 +1,13 @@
+// Replace the contract addresses below with your contract addresses
+// The remote contract address is the address you are going to send the NFT too
+// The local contract address is the address where your NFT is currently
+
+let remoteContractAddress = "0x95eb476accde4577df1c9f14678169ce16ff234d"
+let localContractAddress = "0x44d979267f35dc80065fc4ac94125bda289ab424"
+
+function generateTrustedRemotePath() {
+  let trustedRemote = ethers.utils.solidityPack(['address','address'],[remoteContractAddress, localContractAddress])
+   console.log(trustedRemote)
+}
+
+generateTrustedRemotePath();
